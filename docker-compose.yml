@@ -4,13 +4,14 @@ services:
     build:
       context: .
       args:
-        LOCALSTACK_VERSION: ${LOCALSTACK_VERSION:-4}
+        LOCALSTACK_VERSION: ${LOCALSTACK_VERSION:-2026.03.0}
     volumes:
       - "./temp-persisted-data:/persisted-data"
       - "/var/run/docker.sock:/var/run/docker.sock"
     environment:
       - DEBUG=1
       - PERSIST_FORMAT=${PERSIST_FORMAT-}
+      - LOCALSTACK_AUTH_TOKEN=${LOCALSTACK_AUTH_TOKEN:-}
     networks:
       default:
         aliases:

@@ -1,5 +1,5 @@
 ARG LOCALSTACK_VERSION
-FROM localstack/localstack:${LOCALSTACK_VERSION}
+FROM localstack/localstack-pro:${LOCALSTACK_VERSION}
 
 LABEL maintainer="Graham Esau (hello@graham.cool)"
 
